@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex">
+<title>Painel do Administrador – Keysse Burger</title>
+<link rel="icon" href="images/logo.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/admin.css">
+</head>
+<body>
+<section id="setup" hidden style="max-width:520px;margin:10vh auto"><h2>Configuração em falta</h2><p>Abra <b>js/config.js</b> e cole o Project URL e a chave anon public do seu projeto Supabase. Depois recarregue esta página.</p></section>
+
+<main id="login" hidden><form class="login" id="lf">
+  <h1>Painel do Administrador</h1>
+  <label for="le">Email</label><input id="le" type="email" autocomplete="username" required>
+  <label for="lp">Palavra-passe</label><input id="lp" type="password" autocomplete="current-password" required>
+  <div class="err" id="lerr" role="alert"></div>
+  <button class="btn" style="width:100%" type="submit"><i data-lucide="log-in"></i>Entrar</button>
+</form></main>
+
+<div id="app" hidden>
+  <div class="atop"><span class="brand"><span id="logoS"></span>Keysse Burger · Admin</span>
+    <span><span class="live off" id="live"></span><span id="livet">A ligar…</span></span>
+    <button class="btn gh" id="out"><i data-lucide="log-out"></i>Sair</button></div>
+  <div class="amain">
+    <div class="tabs" id="atabs"><button data-t="o" class="on"><i data-lucide="receipt"></i>Pedidos</button><button data-t="p"><i data-lucide="sandwich"></i>Produtos</button></div>
+    <div id="po">
+      <div class="st"><div><b id="s1">0</b>Novos</div><div><b id="s2">0</b>Pedidos hoje</div><div><b id="s3">0 MT</b>Vendas hoje</div></div>
+      <div class="chips" id="chips"></div>
+      <p class="sub" id="ostat"></p>
+      <div id="ol"></div>
+    </div>
+    <div id="pp" hidden>
+      <p class="sub">Altere nome, preço e disponibilidade. Produtos indisponíveis deixam de aparecer no site.</p>
+      <div id="pl"></div>
+      <div class="newp"><h3>Novo produto</h3>
+        <input id="npn" placeholder="Nome"><select id="npc"><option value="hamburguer">Hambúrguer</option><option value="bebida">Bebida</option></select>
+        <input id="npp" type="number" min="0" placeholder="Preço (MT)"><input id="npd" placeholder="Descrição"><input id="npi" placeholder="Caminho da imagem (ex.: images/novo.jpg)">
+        <button class="btn" id="npb"><i data-lucide="plus"></i>Adicionar produto</button></div>
+    </div>
+  </div>
+</div>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+<script src="https://cdn.jsdelivr.net/npm/lucide@0.469.0/dist/umd/lucide.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.js"></script>
+<script src="js/config.js"></script>
+<script src="js/admin.js"></script>
+</body>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Keysse Burger – Hambúrgueres Halal</title>
+<meta name="description" content="Hambúrgueres halal feitos na hora. Faça o seu pedido online.">
+<link rel="icon" href="images/logo.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header class="top"><div class="hw">
+  <a class="brand" href="#inicio"><span id="logoS"></span><span>Keysse Burger</span></a>
+  <nav id="nav" aria-label="Navegação principal">
+    <a href="#inicio" class="on">Início</a><a href="#menu">Menu</a><a href="#sobre">Sobre</a><a href="#contacto">Contacto</a>
+  </nav>
+  <button class="cartbtn" id="openCart" aria-label="Abrir carrinho"><i data-lucide="shopping-cart"></i>Carrinho <b id="cnt">0</b></button>
+</div></header>
+
+<section id="inicio" class="hero"><div class="wrap"><div class="in">
+  <span class="tag"><i data-lucide="badge-check"></i>100% HALAL</span>
+  <h1>Hambúrgueres <em>feitos na hora</em></h1>
+  <p>Carne suculenta, pão fresquinho e muito sabor. Escolha o seu favorito e faça o pedido em segundos.</p>
+  <div class="hb"><a class="btn big" href="#menu">Ver menu</a><a class="btn gh big" href="#contacto">Contacto</a></div>
+  <ul class="hl"><li><i data-lucide="flame"></i>Feito na hora</li><li><i data-lucide="badge-check"></i>Carne halal</li>
+</div></div></section>
+
+<section id="menu" data-f="0"><div class="wrap">
+  <div class="sh"><h2>Menu</h2><p class="sub">Escolha uma categoria e toque num cartão para ver os detalhes.</p></div>
+  <div class="tabs" id="tabs"><button data-f="0" class="on">Todos</button><button data-f="1"><i data-lucide="sandwich"></i>Hambúrgueres</button><button data-f="2"><i data-lucide="cup-soda"></i>Bebidas</button></div>
+  <div class="grp" data-g="1"><h3 class="cat"><i data-lucide="sandwich"></i>Hambúrgueres</h3><div class="grid" id="g1"></div></div>
+  <div class="grp" data-g="2"><h3 class="cat"><i data-lucide="cup-soda"></i>Bebidas</h3><div class="grid" id="g2"></div></div>
+</div></section>
+
+<section id="sobre" class="alt"><div class="wrap two">
+  <div><h2>Sobre nós</h2><p>Na Keysse Burger fazemos hambúrgueres com ingredientes frescos e carne halal, preparados na hora para si. Do clássico com queijo ao Tudo Duplo, há sempre um para cada fome.</p><a class="btn" href="#menu">Ver o menu</a></div>
+  <div class="about">
+    <div class="feat"><b><i data-lucide="flame"></i>Feito na hora</b>Cada pedido é preparado fresco.</div>
+    <div class="feat"><b><i data-lucide="badge-check"></i>Halal</b>Carne halal, com qualidade e confiança.</div>
+    <div class="feat"><b><i data-lucide="smartphone"></i>Pagamento fácil</b>Dinheiro, e-Mola e M-Pesa.</div>
+  </div>
+</div></section>
+
+<section id="contacto"><div class="wrap">
+  <div class="sh"><h2>Contacto</h2><p class="sub">Fale connosco.</p></div>
+  <div class="cg">
+    <a class="row" href="tel:+258853217149"><span class="ic"><i data-lucide="phone"></i></span><span><b>Telefone</b><br>85 321 7149</span></a>
+    <a class="row" href="mailto:Leonildokeysse49@gmail.com"><span class="ic"><i data-lucide="mail"></i></span><span><b>Email</b><br>Leonildokeysse49@gmail.com</span></a>
+  </div>
+</div></section>
+
+<footer><a class="brand" href="#inicio"><span id="logoF"></span><span>Keysse Burger</span></a>© 2026 Keysse Burger · Todos os direitos reservados<br><a class="adm-link" href="admin.html">Área do administrador</a></footer>
+
+<div class="ov" id="ov"><div class="modal" id="modal" role="dialog" aria-modal="true"></div></div>
+
+<aside class="drawer" id="drawer" aria-label="Carrinho">
+  <div class="dh"><h3><i data-lucide="shopping-cart"></i> O seu carrinho</h3><button class="x" style="position:static" id="closeCart" aria-label="Fechar"><i data-lucide="x"></i></button></div>
+  <div id="items" style="margin:8px 0"></div>
+  <div class="tot"><span>Total</span><span id="tot">0 MT</span></div>
+  <button class="btn gh" id="clr" style="margin-bottom:12px"><i data-lucide="trash-2"></i>Esvaziar carrinho</button>
+  <h3 style="font-size:1.05rem;margin-bottom:6px">Dados do pedido</h3>
+  <label for="fn">Nome *</label><input id="fn" autocomplete="name">
+  <label for="fp">Telefone *</label><input id="fp" type="tel" autocomplete="tel" placeholder="84 xxx xxxx">
+  <label for="fm">Tipo de pedido</label><select id="fm"><option value="levantar">Levantar no local</option><option value="entrega">Entrega</option></select>
+  <div id="fab" style="display:none"><label for="fa">Endereço de entrega *</label><input id="fa"></div>
+  <label for="fy">Pagamento</label><select id="fy"><option>Dinheiro</option><option>e-Mola</option><option>M-Pesa</option></select>
+  <label for="fo">Observações</label><textarea id="fo" rows="2" placeholder="Ex.: sem cebola"></textarea>
+  <button class="btn" id="send"><i data-lucide="check"></i>Finalizar pedido</button>
+</aside>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script src="https://cdn.jsdelivr.net/npm/lucide@0.469.0/dist/umd/lucide.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.js"></script>
+<script src="js/config.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>

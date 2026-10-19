@@ -1,0 +1,19 @@
+/* Painel do administrador */
+body{background:var(--bg)}
+.atop{background:var(--br);color:#fff;padding:12px 20px;display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap}
+.atop .brand{font-size:1.15rem}
+.live{display:inline-block;width:10px;height:10px;border-radius:50%;background:#999;margin-right:6px}
+.live.on{background:#3ddc84;box-shadow:0 0 8px #3ddc84}.live.off{background:#ff6b6b}
+.amain{max-width:1000px;margin:auto;padding:20px 16px 60px}
+.login{max-width:380px;margin:12vh auto;background:var(--card);border:1px solid var(--bd);border-radius:16px;padding:24px}
+.login h1{font-size:1.6rem;color:var(--act);margin-bottom:12px}
+.err{color:var(--rd);min-height:1.3em;font-size:.9rem}
+.chips{display:flex;gap:6px;flex-wrap:wrap;margin:10px 0 14px}
+.chips button{border:2px solid var(--bd);background:var(--card);color:var(--tx);border-radius:20px;padding:6px 14px;font:600 .85rem system-ui;cursor:pointer}
+.chips button.on{background:var(--btn);border-color:var(--btn);color:#fff}
+.ord .meta{color:var(--mu);font-size:.88rem}
+.ord ul{margin:8px 0;padding-left:18px}
+.prow{display:grid;gap:8px;grid-template-columns:1fr;background:var(--card);border:1px solid var(--bd);border-radius:12px;padding:12px;margin:8px 0;align-items:center}
+@media(min-width:760px){.prow{grid-template-columns:2fr 110px auto auto}}
+.prow input{margin:0}.prow label{display:flex;align-items:center;gap:6px;font-size:.9rem;color:var(--tx)}.prow label input{width:auto}
+.newp{display:grid;gap:8px;background:var(--card);border:1px solid var(--bd);border-radius:12px;padding:14px;margin-top:16px}
